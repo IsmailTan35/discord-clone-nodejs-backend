@@ -1,21 +1,21 @@
 // import dotenv from 'dotenv'
 // import con  from'./app_server/models/db.mjs'
-// import express from"./app_server/helper/helperExpress.mjs"
+import express from"./app_server/helper/helperExpress.mjs"
 import { 
     // httpsServer,
     httpServer, 
-    // webSocket
+    webSocket
 } from'./app_server/helper/helperProtocol.mjs'
-// import controllerApi from'./app_server/controller/controllerApi.mjs'
-// import controlleWebsocket from'./app_server/controller/controllerWebsocket.mjs'
+import controllerApi from'./app_server/controller/controllerApi.mjs'
+import controlleWebsocket from'./app_server/controller/controllerWebsocket.mjs'
 
 // const env = dotenv.config()
-// const app = express()
+const app = express()
 const port = process.env.PORT || 3000
 
-const server = httpServer("app",port)
+const server = httpServer(app,port)
 
-// const socket = webSocket(server,app)
+const socket = webSocket(server,app)
 
-// controllerApi(app,"con")
-// controlleWebsocket(socket,"con")
+controllerApi(app,"con")
+controlleWebsocket(socket,"con")
