@@ -1,6 +1,6 @@
 // import dotenv from 'dotenv'
 // import con  from'./app_server/models/db.mjs'
-import express from"./app_server/helper/helperExpress.mjs"
+// import express from"./app_server/helper/helperExpress.mjs"
 import { 
     // httpsServer,
     httpServer, 
@@ -10,8 +10,8 @@ import {
 // import controlleWebsocket from'./app_server/controller/controllerWebsocket.mjs'
 
 // const env = dotenv.config()
-const app = express()
-const server = httpServer(app,3000)
+// const app = express()
+const server = httpServer("app",3000)
 
 // const socket = webSocket(server,app)
 
