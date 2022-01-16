@@ -7,8 +7,8 @@ import * as fs from'fs';
 const httpServer = (app,port) =>{
 	const httpServer = httpCreate((req, res) => {
 		res.statusCode = 200;
-		res.setHeader('Content-Type', 'text/plain');
-		res.end('Hello World\n');
+		res.setHeader('Content-Type', 'text/html');
+		res.end('<h1>Hello World</h1>');
 	  })
 	httpServer.listen(port, () =>{
 		console.log((new Date()) + ' Server is listening on port ' + port);
