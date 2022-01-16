@@ -13,6 +13,7 @@ export default (app,con) =>{
     // app.ws('/', controllerSocket.socketPost)
     // app.ws('/user', controllerSocket.listenUser)
     app.get('/',(req,res) => {
-        res.send("This is a sample express app")
+        res.writeHead(200,{'Content-Type':'text/html'});    
+        res.end('Hello World');    
     })
 }
