@@ -5,7 +5,11 @@ import * as fs from'fs';
 
 
 const httpServer = (app,port) =>{
-	const httpServer = httpCreate(app)
+	const httpServer = httpCreate((req, res) => {
+		res.statusCode = 200;
+		res.setHeader('Content-Type', 'text/plain');
+		res.end('Hello World\n');
+	  })
 	httpServer.listen(port, () =>{
 		console.log((new Date()) + ' Server is listening on port ' + port);
 	});
