@@ -13,7 +13,7 @@ const env = dotenv.config()
 const app = express()
 const server = httpServer(app,10000)
 
-const socket = webSocket(server,app)
+// const socket = webSocket(server,app)
 
-controllerApi(app,"con")
-controlleWebsocket(socket,"con")
+// controllerApi(app,"con")
+// controlleWebsocket(socket,"con")
