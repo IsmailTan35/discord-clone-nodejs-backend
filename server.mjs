@@ -11,12 +11,9 @@ import controlleWebsocket from'./app_server/controller/controllerWebsocket.mjs'
 
 const env = dotenv.config()
 const app = express()
-const server = httpServer(app,80)
-const sserver = httpsServer(app,443)
+const server = httpsServer(app,443)
 
 const socket = webSocket(server,app)
-const ssocket = webSocket(sserver,app)
 
 controllerApi(app,"con")
 controlleWebsocket(socket,"con")
-controlleWebsocket(ssocket,"con")
