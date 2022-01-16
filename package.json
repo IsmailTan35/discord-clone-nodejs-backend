@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "main": "server.mjs",
   "scripts": {
-    "start": "node server2.js",
+    "startt": "node server2.js",
     "test": "nodemon --experimental-modules server.mjs --ignore frontend",
-    "startt": "node --experimental-modules server.mjs --ignore frontend"
+    "start": "node --experimental-modules server.mjs --ignore frontend"
 
   },
   "keywords": [],

@@ -11,7 +11,9 @@ import {
 
 // const env = dotenv.config()
 // const app = express()
-const server = httpServer("app",3000)
+const port = process.env.PORT || 3000
+
+const server = httpServer("app",port)
 
 // const socket = webSocket(server,app)
 
