@@ -4,7 +4,7 @@
   "main": "server.mjs",
   "scripts": {
     "start": "nodemon --experimental-modules server.mjs --ignore frontend",
-    "test": "nodemon server2.mjs"
+    "test": "node --experimental-modules server.mjs --ignore frontend"
 
   },
   "keywords": [],
